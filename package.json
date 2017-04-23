@@ -1,0 +1,50 @@
+{
+  "name": "news_crawler",
+  "version": "1.0.0",
+  "description": "a simple news crawler - NodeJS, Redis",
+  "main": "index.js",
+  "author": "NTC",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "log4js": "^1.1.1",
+    "morgan": "^1.8.1",
+    "node-fetch": "1.6.3",
+    "redis": "^2.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-rewire": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "babel-runtime": "6.11.6",
+    "babel-template": "^6.24.1",
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.0.0"
+  },
+  "scripts": {
+    "test": "DEBUG=true ./node_modules/.bin/babel-node src/lib/dantri/*.test.js",
+    "test2": "DEBUG=true ./node_modules/.bin/babel-node src/lib/vietbao/*.test.js",
+    "testVNN": "DEBUG=true ./node_modules/.bin/babel-node src/lib/vietnamnet/*.test.js",
+    "testZingNews": "DEBUG=true ./node_modules/.bin/babel-node src/lib/zingnews/*.test.js",
+    "testPNN": "DEBUG=true ./node_modules/.bin/babel-node src/lib/phununews/*.test.js",
+    "testReadDir": "DEBUG=false ./node_modules/.bin/babel-node src/main/*.test.js",
+    "testModel": "DEBUG=true ./node_modules/.bin/babel-node src/models/*.test.js",
+    "crawl": "DEBUG=true ./node_modules/.bin/babel-node src/main/run.js",
+    "server": "./node_modules/.bin/babel-node src/index.js"
+  }
+}

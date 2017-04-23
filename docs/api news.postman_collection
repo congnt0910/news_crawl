@@ -1,0 +1,33 @@
+{
+	"variables": [],
+	"info": {
+		"name": "api news",
+		"_postman_id": "962ac67d-dc60-0445-f1b5-43e959186701",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9125/api/v1/articles?from=0&limit=2",
+			"request": {
+				"url": "http://localhost:9125/api/v1/articles?from=0&limit=2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Retrieve list articles"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9125/api/v1/articles?from=0&limit=2&cate=giai-tri",
+			"request": {
+				"url": "http://localhost:9125/api/v1/articles?from=0&limit=2&cate=giai-tri",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Retrieve list articles by category"
+			},
+			"response": []
+		}
+	]
+}
