@@ -27,6 +27,7 @@ router.get('/articles', async (req, res) => {
     }
   } catch (e) {
     log.error(e);
+    res.status(404);
     res.json({ Error: { message: e.message } });
   }
 });
