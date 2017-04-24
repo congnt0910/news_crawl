@@ -3,6 +3,7 @@
 
 [Yarn](https://yarnpkg.com/en/)
 
+[Redis](https://redis.io)
 
 ## Structure
 
