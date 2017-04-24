@@ -92,3 +92,14 @@
 			}
 		]
 		```
+
+
+
+## Class Diagram
+
+![class diagram](https://github.com/congnt0910/news_crawl/blob/master/docs/news_crawl_class.png?raw=true)
+
+
+## Store
+
+[Data structure store in redis](https://github.com/congnt0910/news_crawl/blob/master/docs/store.md)
