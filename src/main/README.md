@@ -1,5 +1,6 @@
+## Sequence Diagram
 
-```
+```mermaid
 sequenceDiagram
   User->>+ ProcessManage: pushJob(job)
   alt not max process
