@@ -2,7 +2,7 @@ import redis from 'redis';
 import bluebird from 'bluebird';
 import { redis as redisConfig } from '../config';
 // helper
-import Logger from '../helper/logger';
+import Logger from '../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 

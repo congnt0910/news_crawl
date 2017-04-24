@@ -1,6 +1,6 @@
 import store from './store';
 // helper
-import Logger from '../helper/logger';
+import Logger from '../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 

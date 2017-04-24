@@ -5,7 +5,8 @@ import articleModel from '../../models/article';
 helper.sleep(3000)
   .then(() => {
     const obj = new DanTri();
-    return obj.articles({ path: 'suc-manh-so.htm', name: 'Sức mạnh số' })
+    // return obj.articles({ path: 'suc-manh-so.htm', name: 'Sức mạnh số' })
+    return obj.articles({ path: 'http://dulich.dantri.com.vn/du-lich/tours-ua-thich.htm', name: 'Du lịch', selector: 'dulich' },)
       .then(listArticles => {
         console.log(JSON.stringify(listArticles, null, 4));
         return listArticles;

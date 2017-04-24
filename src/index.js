@@ -5,7 +5,7 @@ import morgan from 'morgan';
 import { port } from './config';
 import apiRoute from './routes/api';
 // helper
-import Logger from './helper/logger';
+import Logger from './helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 

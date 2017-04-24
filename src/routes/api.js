@@ -1,7 +1,7 @@
 import express from 'express';
 import articleModel from '../models/article';
 // helper
-import Logger from '../helper/logger';
+import Logger from '../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 

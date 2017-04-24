@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import Article from './Article';
 import Category from './Category';
 // helper
-import Logger from '../../helper/logger';
+import Logger from '../../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 
@@ -106,6 +106,7 @@ class Parser {
       if (articleUrl.indexOf(this.host) === -1) {
         articleUrl = url.resolve(this.host, articleUrl);
       }
+
       const response = await fetch(articleUrl);
       const body = await response.text();
 
@@ -147,8 +148,8 @@ class Parser {
   isUrl = (path) => {
     const result = url.parse(path);
     const isUrl = result.host && result.protocol;
-    if(isUrl) {
-      this.host = `${result.protocol}://${result.host}`;
+    if (isUrl) {
+      this.host = `${result.protocol}//${result.host}`;
     }
     return isUrl;
   };
@@ -160,6 +161,7 @@ class Parser {
    * @returns {Promise.<Object>}
    */
   async articles ({ path, name }) {
+
     const listArticleObj = [];
     this.host = this.defaultHost;
     const cateUrl = this.isUrl(path) ? path : url.resolve(this.host, path);
@@ -232,6 +234,24 @@ class Parser {
     for (let i = 0; i < data.listArticleObj.length; i++) {
       await data.listArticleObj[i].save();
     }
+  };
+
+  /**
+   *
+   * @param listArticlesSelector {string} the selector to search list article block.
+   * @param articleSelector {string} the selector to search article in list article block.
+   * @param thumbSelector {string} the selector to search thumbnail in article.
+   * @param titleSelector {string} the selector to search title in article.
+   * @param excerptSelector {string} the selector to search excerpt in article.
+   * @param contentSelector {string} the selector to search full content of article. found this selector in article details.
+   */
+  setSelector ({ listArticlesSelector, articleSelector, thumbSelector, titleSelector, excerptSelector, contentSelector }) {
+    this.listArticlesSelector = listArticlesSelector;
+    this.articleSelector = articleSelector;
+    this.thumbSelector = thumbSelector;
+    this.titleSelector = titleSelector;
+    this.excerptSelector = excerptSelector;
+    this.contentSelector = contentSelector;
   }
 }
 

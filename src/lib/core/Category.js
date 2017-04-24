@@ -1,7 +1,7 @@
 import { removeDiacritics } from '../../helper/index';
 import categoryModel from '../../models/category';
 // helper
-import Logger from '../../helper/logger';
+import Logger from '../../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 

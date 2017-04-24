@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 // helper
-import Logger from '../helper/logger';
+import Logger from '../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 

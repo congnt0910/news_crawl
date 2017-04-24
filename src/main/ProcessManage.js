@@ -3,7 +3,7 @@ import path from 'path';
 import os from 'os';
 import ProcessWrapper from './ProcessWrapper';
 // helper
-import Logger from '../helper/logger';
+import Logger from '../helper/Logger';
 
 const log = new Logger(__filename); // eslint-disable-line no-unused-vars
 
